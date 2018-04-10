@@ -19,4 +19,5 @@
 
 
 ## Refactor TODOs
+- Add full_name method for users
 - Refactor user association intergration test in post_spec
