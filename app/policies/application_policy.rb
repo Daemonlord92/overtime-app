@@ -6,6 +6,11 @@ class ApplicationPolicy
     @record = record
   end
 
+  
+  def admin_types
+    ['AdminUser']
+  end
+
   def index?
     false
   end
