@@ -43,7 +43,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
     :posts,
     :id,
     :email,
-    :phone
+    :phone,
     :sign_in_count,
     :current_sign_in_at,
     :last_sign_in_at,

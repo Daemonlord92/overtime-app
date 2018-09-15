@@ -2,13 +2,18 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  before do
+    @user = FactoryBot.create(:user)
+  end
   describe "creation" do
-    before do
-      @user = FactoryBot.create(:user)
-    end
-
     it "can be created" do
       expect(@user).to be_valid
+    end
+  end
+
+  describe "vaildations" do
+    before do
+      @user = FactoryBot.create(:user)
     end
 
     it "cannot be created without first_name" do
@@ -26,5 +31,14 @@ RSpec.describe User, type: :model do
       expect(@user).to_not be_valid
     end
 
+    it 'requires the phone attr to only contain intergers' do
+        @user.phone = 'mybloodstr'
+        expect(@user).to_not be_valid
+    end
+
+    it 'requires the phone attr to only  have 10 chars' do
+        @user.phone = '12345678901'
+        expect(@user).to_not be_valid
+    end
   end
 end
