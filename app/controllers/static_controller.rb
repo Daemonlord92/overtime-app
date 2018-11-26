@@ -8,3 +8,4 @@ class StaticController < ApplicationController
     end
 	end
 end
+
