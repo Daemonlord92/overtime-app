@@ -1,4 +1,3 @@
-
 @user = User.create(email: "user@test.com",
 										password: "asdfasdf",
 										password_confirmation: "asdfasdf",
